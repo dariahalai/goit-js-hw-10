@@ -27,7 +27,7 @@ export function fetchCountries(name){
                 <div class="country-item__info">
                <p class="country-item__capital">Capital :${country.capital}</p>
                <p class="country-item__population">Population :${country.population}</p>
-               <p class="country-item__languages">Languages :${country.languages}</p>
+               <p class="country-item__languages">Languages :${Object.values(country.languages)}</p>
                </li>
                `).join('')
                refs.countryList.innerHTML = markup;
@@ -48,8 +48,6 @@ export function fetchCountries(name){
             refs.countryList.innerHTML = '';
                Notify.info("Too many matches found. Please enter a more specific name.");
            }
-               
-  
    })
    .catch(error => {
     if (error.message === '404') {
