@@ -24,7 +24,7 @@ ul{
   list-style: none;
 }
 
-.country-item__main {
+.country-item__info {
   display: flex;
   align-items: center;
   flex-direction: row;

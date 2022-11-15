@@ -16,9 +16,12 @@ refs.input.addEventListener('input',debounce(onSearch,DEBOUNCE_DELAY))
 function onSearch(e) {
 let name = e.target.value;
 let NAME = name.trim().toLowerCase();
-fetchCountries(NAME)
 if(NAME === ''){
     refs.countryList.innerHTML = '';
+    refs.countryInfo.innerHTML = '';
+    return;
 }
+fetchCountries(NAME)
+
 }
 
